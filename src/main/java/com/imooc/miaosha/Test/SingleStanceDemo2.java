@@ -26,7 +26,6 @@ public class SingleStanceDemo2 {
                     }
                     instance = new SingleStanceDemo2();
                 }
-
             }
         }
         return instance;
