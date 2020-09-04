@@ -100,7 +100,7 @@ public class MiaoshaController implements InitializingBean {
     		return Result.error(CodeMsg.MIAO_SHA_OVER);
     	}
     	//预减库存
-    	long stock = redisService.decr(GoodsKey.getMiaoshaGoodsStock, ""+goodsId);//10
+    	long stock = redisService.decr(GoodsKey.getMiaoshaGoodsStock, ""+goodsId);  //10
     	if(stock < 0) {
     		 localOverMap.put(goodsId, true);
     		return Result.error(CodeMsg.MIAO_SHA_OVER);
